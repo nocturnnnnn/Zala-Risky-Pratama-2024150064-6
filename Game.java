@@ -40,7 +40,8 @@ abstract class KarakterGame {
         this.healthPoint = healthPoint;
     }
 
-    // Abstraction: Abstract method yang detailnya disembunyikan dan harus diimplementasikan oleh subclass
+    // Abstraction: Abstract method yang detailnya disembunyikan dan harus
+    // diimplementasikan oleh subclass
     public abstract void serang();
 
     // Method umum
@@ -49,7 +50,8 @@ abstract class KarakterGame {
     }
 }
 
-// Inheritance (Poin 4): Class Ksatria mewarisi class KarakterGame (Poin 1: Class)
+// Inheritance (Poin 4): Class Ksatria mewarisi class KarakterGame (Poin 1:
+// Class)
 class Ksatria extends KarakterGame {
     private int kekuatanPedang;
 
@@ -58,7 +60,8 @@ class Ksatria extends KarakterGame {
         this.kekuatanPedang = kekuatanPedang;
     }
 
-    // Polymorphism (Poin 5): Method Overriding (menimpa method abstrak dari superclass)
+    // Polymorphism (Poin 5): Method Overriding (menimpa method abstrak dari
+    // superclass)
     @Override
     public void serang() {
         System.out.println(getNama() + " menyerang dengan pedang! Damage: " + kekuatanPedang);
@@ -84,7 +87,7 @@ class Penyihir extends KarakterGame {
     public void serang() {
         System.out.println(getNama() + " menembakkan bola api! Damage: " + kekuatanSihir);
     }
-    
+
     // Polymorphism: Method Overloading (Tambahan aksi unik)
     public void sembuhkan(KarakterGame target) {
         int heal = kekuatanSihir / 2;
@@ -94,7 +97,7 @@ class Penyihir extends KarakterGame {
 }
 
 // Class Utama
-public class MainGame {
+public class Game {
     public static void main(String[] args) {
         System.out.println("=== Simulasi Karakter Game OOP ===\n");
 
